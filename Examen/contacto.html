@@ -4,11 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Formulario de contacto profesional de Sergio Alejandro Trigo Murillo.">
-    <title>Contáctame </title>
+    <title>Contáctame</title>
 </head>
 
 <body>
+
+    <aside aria-label="Navegación de retorno">
+        <nav>
+            <p><a href="index.html">&larr; Volver a la pagina principal</a></p>
+        </nav>
+    </aside>
+
+    <hr>
+
+    <header role="banner">
+        <h1>Contacto</h1>
+        <p>Si deseas contactar conmigo rellene el siguiente formulario.</p>
+    </header>
+
+    <hr>
+
+    <main role="main">
+        <section id="formulario-contacto" aria-labelledby="contacto-heading">
+            <h2 id="contacto-heading">Formulario de Comunicación</h2>
+
+            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                <fieldset>
+                    <legend><strong>Datos del Solicitante</strong></legend>
+
+                    <p>
+                        <label for="nombre">Nombre completo:</label><br>
+                        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" placeholder="Ej. Ana Pérez" aria-required="true" pattern="´{a-z}{A-Z}">
+                    </p>
+                    </p>
+
+                    <p>
+                        <label for="correo">Correo electrónico:</label><br>
+                        <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com" aria-required="true">
+                    </p>
+
+                    <p>
+                        <label for="telefono">Teléfono:</label><br>
+                        <input type="tel" id="telefono" name="telefono" required pattern="(\+591|591)?[67][0-9]{7}" placeholder="+591 12345678" aria-describedby="tel-help" aria-required="true"><br>
+                        <small id="tel-help">Formato requerido: celular de 8 dígitos (ej. +591 12345678 o 12345678).</small>
+                    </p>
+
+                    <p>
+                        <label for="motivo">Motivo de contacto:</label><br>
+                        <select id="motivo" name="motivo" required aria-required="true">
+                            <option value="" disabled selected> Seleccione una opción </option>
+                            <option value="oferta-laboral">Oferta laboral</option>
+                            <option value="proyecto-freelance">Proyecto independiente</option>
+                            <option value="academico">Académico</option>
+                            <option value="otro">Otro Motivo</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="5" cols="40" required minlength="10" maxlength="500" placeholder="Escriba los motivos por los que desea contactarse conmigoi" aria-required="true"></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="consentimiento" name="consentimiento" required aria-required="true">
+                        <label for="consentimiento">Autorizo el uso de estos datos para responder a esta consulta</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit"><strong>Enviar Mensaje</strong></button>
+                    <button type="reset">Limpiar Campos</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <hr>
 
     <footer role="contentinfo">
         <p><small>&copy; 2026 Sergio Alejandro Trigo Murillo. Todos los derechos reservados.</small></p>
