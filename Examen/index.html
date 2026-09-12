@@ -6,27 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hoja de vida personal y portafolio profesional en HTML5 nativo.">
     <title>Examen - Hoja de Vida</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
     <aside aria-label="Menú">
+    <input type="checkbox" id="menu-toggle" aria-label="Abrir menú de navegación">
+    <label for="menu-toggle" class="menu-btn" aria-hidden="true">&#9776; Menú</label>
+
+    <div class="sidebar-content">
         <nav aria-label="Navegación principal">
             <h2>Menú</h2>
             <ul>
                 <li><a href="#datos-personales">Datos Personales</a></li>
                 <li><a href="#perfil-profesional">Perfil Profesional</a></li>
                 <li><a href="#trabajos">Trabajos</a></li>
+                <li><a href="#habilidades">Nivel de Conocimiento</a></li>
                 <li><a href="contacto.html">Contáctame</a></li>
             </ul>
         </nav>
 
         <p>
-            <button type="button" id="btn-modo-oscuro" aria-label="Alternar entre modo claro y modo oscuro" aria-pressed="false">
+            <button type="button" id="btn-modo-oscuro" aria-label="Alternar entre modo claro y modo oscuro">
                 Modo Oscuro
             </button>
         </p>
-    </aside>
+    </div>
+</aside>
 
     <hr>
 
@@ -53,7 +60,7 @@
                 </address>
                 
                 <div>
-                    <h1 id="info-estudios">Estudios y cursos</h1>
+                    <h2 id="info-estudios">Estudios y cursos</h2>
                     <nav>
                         <ul>
                             <li><strong>Estudios basicos:</strong> Colegio Amor de Dios 2010-2023</li><br>
@@ -80,7 +87,7 @@
                 </p>
                 <p>
                     <strong>Habilidades blandas:</strong> 
-                    <em>Gran sincronización en equipo, </em>.
+                    <em>Gran sincronización en equipo, manejo de situaciones extremas que le ocurra a la empresa o enfrente, experto en cuidado de plantas y directo y sensato. </em>.
                 </p>
 
             </article>
@@ -110,7 +117,7 @@
         </section>
 
         <section id="habilidades" aria-labelledby="habilidades-heading">
-            <h2 id="habilidades-heading">Nivel de Conocimiento y Habilidades Técnicas</h2>
+            <h2 id="habilidades-heading">Nivel de conocimiento</h2>
 
             <article>
                 <h3>Lenguajes de Programación y Tecnologías</h3>
