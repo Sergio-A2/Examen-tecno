@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hoja de vida personal y portafolio profesional en HTML5 nativo.">
+    <title>Examen - Hoja de Vida</title>
+</head>
+
+<body>
+
+    <aside aria-label="Menú">
+        <nav aria-label="Navegación principal">
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="#datos-personales">Datos Personales</a></li>
+                <li><a href="#perfil-profesional">Perfil Profesional</a></li>
+                <li><a href="#trabajos">Trabajos</a></li>
+                <li><a href="contacto.html">Contáctame</a></li>
+            </ul>
+        </nav>
+
+        <p>
+            <button type="button" id="btn-modo-oscuro" aria-label="Alternar entre modo claro y modo oscuro" aria-pressed="false">
+                Modo Oscuro
+            </button>
+        </p>
+    </aside>
+
+    <hr>
+
+    <header role="banner">
+        <figure>
+            <img src="image/Foto.jpeg" alt="Fotografía profesional de Sergio Alejandro Trigo Murillo" width="180" height="180" loading="eager">
+            <figcaption>Fotografía de perfil</figcaption>
+        </figure>
+    </header>
+
+    <hr>
+
+    <main id="main-content" role="main">
+
+        <section id="datos-personales" aria-labelledby="datos-heading">
+            <h2 id="datos-heading">Datos Personales</h2>
+            <article>
+                <h3>Sergio Alejandro Trigo Murillo</h3>
+                <p><strong>Profesión</strong> Ingeniero de sistemas</p>
+                <address>
+                    <strong>País:</strong> La Paz, Bolivia<br>
+                    <strong>Correo Electrónico:</strong> <a href="correo">sergio.trigo754@gmail.com</a><br>
+                    <strong>Teléfono:</strong> <a href="telefono">+591 62344037</a>
+                </address>
+                
+                <div>
+                    <h1 id="info-estudios">Estudios y cursos</h1>
+                    <nav>
+                        <ul>
+                            <li><strong>Estudios basicos:</strong> Colegio Amor de Dios 2010-2023</li><br>
+                            <li><strong>Estudio profesional:</strong> Universidad Catolica Boliviana 2024-2029</li><br>
+                            <li><strong>Curso:</strong> Redes y seguridad Packet Tracer 2026</li><br>
+                            <li><strong>Curso:</strong> Google DeepMind 2026</li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        
+        <section id="perfil-profesional" aria-labelledby="perfil-heading">
+            <h2 id="perfil-heading">Perfil profesional</h2>
+            <article>
+                <p>
+                    <strong>Presentación:</strong> 
+                    Ingeniero de sistemas, experto en diseño de conexiones de redes sobre todo en temas de seguridad y seguridad de conexiones en empresas.
+                    Poseo 1 año de experiencia en el campo mencionado.
+                </p>
+                <p>
+                    <strong>Habilidades blandas:</strong> 
+                    <em>Gran sincronización en equipo, </em>.
+                </p>
+
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="trabajos" aria-labelledby="trabajos-heading">
+            <h2 id="trabajos-heading">Trabajos y proyectos destacados</h2>
+            <article>
+                <h3>A.P. Moller - Maersk</h3>
+                <p><strong>Puesto:</strong> Ingeniero en redes</p>
+                <p><strong>Periodo:</strong> 1 año</p>
+            </article>
+
+            <article>
+                <h3>Creador de grafos online</h3>
+                <p><strong>Rol:</strong> Desarrollo en la parte HUD del usuario.</p>
+                <p><strong>Descripción:</strong> [Explica el objetivo del proyecto, el problema que resuelve y cómo funciona].</p>
+                <p><strong>Tecnologías Utilizadas:</strong> <code>Vue</code>, <code>JavaScript</code>.</p>
+                <p>
+                    <strong>Enlace:</strong> 
+                    <a href="https://github.com/Agares21/Proyecto-algoritmos" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer role="contentinfo">
+        <p><small>&copy; 2026 Sergio Alejandro Trigo Murillo. Todos los derechos reservados.</small></p>
+    </footer>
+
+</body>
+
+</html>
