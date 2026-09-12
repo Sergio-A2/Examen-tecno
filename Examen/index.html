@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hoja de vida personal y portafolio profesional en HTML5 nativo.">
-    <title>Examen - Hoja de Vida</title>
+    <title>Examen - Hoja de vida</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -26,10 +25,9 @@
                 <li><a href="contacto.html">Contáctame</a></li>
             </ul>
         </nav>
-
         <p>
-            <button type="button" id="btn-modo-oscuro" aria-label="Alternar entre modo claro y modo oscuro">
-                Modo Oscuro
+            <button type="button" id="btn-modo-oscuro" class="theme-toggle-btn" aria-label="Alternar entre modo claro y modo oscuro" aria-pressed="false">
+                <span class="theme-icon">&#127769;</span> Modo Oscuro
             </button>
         </p>
     </div>
@@ -39,7 +37,7 @@
 
     <header role="banner">
         <figure>
-            <img src="image/Foto.jpeg" alt="Fotografía profesional de Sergio Alejandro Trigo Murillo" width="180" height="180" loading="eager">
+            <img src="assets/image/Foto.jpeg" alt="Fotografía profesional de Sergio Alejandro Trigo Murillo" width="180" height="180" loading="eager">
             <figcaption>Fotografía de perfil</figcaption>
         </figure>
     </header>
@@ -49,15 +47,15 @@
     <main id="main-content" role="main">
 
         <section id="datos-personales" aria-labelledby="datos-heading">
-            <h2 id="datos-heading">Datos Personales</h2>
+            <h2 id="datos-heading">Datos personales</h2>
             <article>
                 <h3>Sergio Alejandro Trigo Murillo</h3>
                 <p><strong>Profesión</strong> Ingeniero de sistemas</p>
                 <address>
-                    <strong>País:</strong> La Paz, Bolivia<br>
-                    <strong>Correo Electrónico:</strong> <a href="correo">sergio.trigo754@gmail.com</a><br>
-                    <strong>Teléfono:</strong> <a href="telefono">+591 62344037</a>
-                </address>
+                        <strong>País:</strong> La Paz, Bolivia<br>
+                        <strong>Correo electrónico:</strong> <a href="mailto:sergio.trigo754@gmail.com">sergio.trigo754@gmail.com</a><br>
+                        <strong>Teléfono:</strong> <a href="tel:+59162344037">+591 62344037</a>
+                    </address>
                 
                 <div>
                     <h2 id="info-estudios">Estudios y cursos</h2>
@@ -107,7 +105,7 @@
                 <h3>Creador de grafos online</h3>
                 <p><strong>Rol:</strong> Desarrollo en la parte HUD del usuario.</p>
                 <p><strong>Descripción:</strong> Pagina web en la que sepuede crear diagramas con nodos junto a diversos algoritmos.</p>
-                <p><strong>Tecnologías Utilizadas:</strong> <code>Vue</code>, <code>JavaScript</code>.</p>
+                <p><strong>Tecnologías utilizadas:</strong> <code>Vue</code>, <code>JavaScript</code>.</p>
                 <p>
                     <strong>Enlace:</strong> 
                     <a href="https://github.com/Agares21/Proyecto-algoritmos" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
@@ -120,7 +118,7 @@
             <h2 id="habilidades-heading">Nivel de conocimiento</h2>
 
             <article>
-                <h3>Lenguajes de Programación y Tecnologías</h3>
+                <h3>Lenguajes de programación y tecnologías</h3>
                 <ul>
                     <li>
                         <label for="meter-js">JavaScript:</label>
@@ -161,7 +159,7 @@
     <footer role="contentinfo">
         <p><small>&copy; 2026 Sergio Alejandro Trigo Murillo. Todos los derechos reservados.</small></p>
     </footer>
-
+<script src="js/theme.js"></script>
 </body>
 
 </html>

@@ -11,7 +11,7 @@
 
 <body>
 
-    <header class="top-nav-container" role="banner">
+<header class="top-nav-container" role="banner">
         <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú de navegación">
         <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">&#9776; Menú</label>
 
@@ -21,6 +21,11 @@
                 <li><a href="index.html#perfil-profesional" class="btn-nav">Perfil profesional</a></li>
                 <li><a href="index.html#trabajos" class="btn-nav">Trabajos y proyectos</a></li>
                 <li><a href="index.html#habilidades" class="btn-nav">Nivel de conocimientos</a></li>
+                <li>
+                    <button type="button" id="btn-modo-oscuro" class="theme-toggle-btn" aria-label="Alternar entre modo claro y modo oscuro">
+                        <span class="theme-icon">&#127769;</span> Modo Oscuro
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -38,7 +43,7 @@
                     <p class="form-group">
                         <label for="nombre">Nombre completo:</label>
                         <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" 
-                               placeholder="Ej. Ana Pérez" aria-required="true" 
+                               placeholder="Ej. Tunombre" aria-required="true" 
                                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+">
                     </p>
 
@@ -92,7 +97,8 @@
     <footer role="contentinfo">
         <p><small>&copy; 2026 Sergio Alejandro Trigo Murillo. Todos los derechos reservados.</small></p>
     </footer>
-
+<script src="js/theme.js"></script>
+<script src="js/validacion.js"></script>
 </body>
 
 </html>
