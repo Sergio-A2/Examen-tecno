@@ -4,162 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Examen - Hoja de vida</title>
+    <meta name="description" content="Hoja de vida personal y portafolio profesional en HTML5 nativo y CSS3 moderno.">
+    <title>Examen 2 Tecno Web</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <aside aria-label="Menú">
-    <input type="checkbox" id="menu-toggle" aria-label="Abrir menú de navegación">
-    <label for="menu-toggle" class="menu-btn" aria-hidden="true">&#9776; Menú</label>
+    <a href="#contenido_principal" class="skip_link">Saltar al contenido principal</a>
 
-    <div class="sidebar-content">
-        <nav aria-label="Navegación principal">
-            <h2>Menú</h2>
-            <ul>
-                <li><a href="#datos-personales">Datos Personales</a></li>
-                <li><a href="#perfil-profesional">Perfil Profesional</a></li>
-                <li><a href="#trabajos">Trabajos</a></li>
-                <li><a href="#habilidades">Nivel de Conocimiento</a></li>
-                <li><a href="contacto.html">Contáctame</a></li>
-            </ul>
-        </nav>
-        <p>
-            <button type="button" id="btn-modo-oscuro" class="theme-toggle-btn" aria-label="Alternar entre modo claro y modo oscuro" aria-pressed="false">
-                <span class="theme-icon">&#127769;</span> Modo Oscuro
-            </button>
-        </p>
-    </div>
-</aside>
+    <div class="layout_wrapper">
+        <aside aria-label="Menú principal de navegación" class="sidebar">
+            <div class="sidebar_header">
+                <h2>Menú</h2>
+                <button type="button" id="btn_menu_toggle" class="menu_toggle_btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav_menu">
+                    <span class="hamburger_icon" aria-hidden="true">&#9776;</span>
+                </button>
+            </div>
 
-    <hr>
-
-    <header role="banner">
-        <figure>
-            <img src="assets/image/Foto.jpeg" alt="Fotografía profesional de Sergio Alejandro Trigo Murillo" width="180" height="180" loading="eager">
-            <figcaption>Fotografía de perfil</figcaption>
-        </figure>
-    </header>
-
-    <hr>
-
-    <main id="main-content" role="main">
-
-        <section id="datos-personales" aria-labelledby="datos-heading">
-            <h2 id="datos-heading">Datos personales</h2>
-            <article>
-                <h3>Sergio Alejandro Trigo Murillo</h3>
-                <p><strong>Profesión</strong> Ingeniero de sistemas</p>
-                <address>
-                        <strong>País:</strong> La Paz, Bolivia<br>
-                        <strong>Correo electrónico:</strong> <a href="mailto:sergio.trigo754@gmail.com">sergio.trigo754@gmail.com</a><br>
-                        <strong>Teléfono:</strong> <a href="tel:+59162344037">+591 62344037</a>
-                    </address>
-                
-                <div>
-                    <h2 id="info-estudios">Estudios y cursos</h2>
-                    <nav>
-                        <ul>
-                            <li><strong>Estudios basicos:</strong> Colegio Amor de Dios 2010-2023</li><br>
-                            <li><strong>Estudio profesional:</strong> Universidad Catolica Boliviana 2024-2029</li><br>
-                            <li><strong>Curso:</strong> Redes y seguridad Packet Tracer 2026</li><br>
-                            <li><strong>Curso:</strong> Google DeepMind 2026</li>
-                        </ul>
-                    </nav>
-
-                </div>
-            </article>
-        </section>
-
-        <hr>
-
-        
-        <section id="perfil-profesional" aria-labelledby="perfil-heading">
-            <h2 id="perfil-heading">Perfil profesional</h2>
-            <article>
-                <p>
-                    <strong>Presentación:</strong> 
-                    Ingeniero de sistemas, experto en diseño de conexiones de redes sobre todo en temas de seguridad y seguridad de conexiones en empresas.
-                    Poseo 1 año de experiencia en el campo mencionado.
-                </p>
-                <p>
-                    <strong>Habilidades blandas:</strong> 
-                    <em>Gran sincronización en equipo, manejo de situaciones extremas que le ocurra a la empresa o enfrente, experto en cuidado de plantas y directo y sensato. </em>.
-                </p>
-
-            </article>
-        </section>
-
-        <hr>
-
-        <section id="trabajos" aria-labelledby="trabajos-heading">
-            <h2 id="trabajos-heading">Trabajos y proyectos destacados</h2>
-            <article>
-                <h3>A.P. Moller - Maersk</h3>
-                <p><strong>Puesto:</strong> Ingeniero en redes</p>
-                <p><strong>Periodo:</strong> 1 año</p>
-            </article>
-
-            <article>
-                <h3>Creador de grafos online</h3>
-                <p><strong>Rol:</strong> Desarrollo en la parte HUD del usuario.</p>
-                <p><strong>Descripción:</strong> Pagina web en la que sepuede crear diagramas con nodos junto a diversos algoritmos.</p>
-                <p><strong>Tecnologías utilizadas:</strong> <code>Vue</code>, <code>JavaScript</code>.</p>
-                <p>
-                    <strong>Enlace:</strong> 
-                    <a href="https://github.com/Agares21/Proyecto-algoritmos" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
-                </p>
-            </article>
-
-        </section>
-
-        <section id="habilidades" aria-labelledby="habilidades-heading">
-            <h2 id="habilidades-heading">Nivel de conocimiento</h2>
-
-            <article>
-                <h3>Lenguajes de programación y tecnologías</h3>
-                <ul>
-                    <li>
-                        <label for="meter-js">JavaScript:</label>
-                        <meter id="meter-js" min="0" max="100" value="85" low="40" high="80" optimum="90" aria-label="Nivel de dominio en JavaScript">85%</meter>
-                        <span>Avanzado</span>
-                    </li>
-                    <br>
-                    <li>
-                        <label for="meter-vue">Vue.js:</label>
-                        <meter id="meter-vue" min="0" max="100" value="75" low="40" high="80" optimum="90" aria-label="Nivel de dominio en Vue.js">75%</meter>
-                        <span>Intermedio</span>
-                    </li>
-                    <br>
-                    <li>
-                        <label for="meter-python">Python:</label>
-                        <meter id="meter-python" min="0" max="100" value="70" low="40" high="80" optimum="90" aria-label="Nivel de dominio en Python">70%</meter>
-                        <span>Intermedio</span>
-                    </li>
-                    <br>
-                    <li>
-                        <label for="meter-cplus">C++:</label>
-                        <meter id="meter-cplus" min="0" max="100" value="65" low="40" high="80" optimum="90" aria-label="Nivel de dominio en C++">65%</meter>
-                        <span>Intermedio</span>
-                    </li>
-                    <br>
-                    <li>
-                        <label for="meter-redes">Redes & Packet Tracer:</label>
-                        <meter id="meter-redes" min="0" max="100" value="90" low="40" high="80" optimum="90" aria-label="Nivel de dominio en Redes y Packet Tracer">90%</meter>
-                        <span>Experto</span>
-                    </li>
+            <nav id="nav_menu" class="nav_menu" aria-label="Navegación principal">
+                <ul class="nav_list">
+                    <li><a href="#datos_personales" class="nav_link">Datos Personales</a></li>
+                    <li><a href="#perfil_profesional" class="nav_link">Perfil Profesional</a></li>
+                    <li><a href="#trabajos" class="nav_link">Trabajos</a></li>
+                    <li><a href="#habilidades" class="nav_link">Habilidades</a></li>
+                    <li><a href="#repositorios_github" class="nav_link">Proyectos GitHub</a></li>
+                    <li><a href="contacto.html" class="nav_link">Contáctame</a></li>
                 </ul>
-            </article>
-        </section>
-    </main>
+            </nav>
 
-    <hr>
+            <p class="theme_wrapper">
+                <button type="button" id="btn_modo_oscuro" class="theme_toggle_btn" aria-label="Alternar entre modo claro y modo oscuro" aria-pressed="false">
+                    <span class="theme_icon">&#127769;</span> Modo Oscuro
+                </button>
+            </p>
+        </aside>
+        <div class="content_area">
+            <header role="banner" class="main_header">
+                <figure class="profile_figure">
+                    <img src="image/Foto.jpeg" alt="Fotografía profesional de Sergio Alejandro Trigo Murillo" width="180" height="180" loading="eager">
+                    <figcaption>Fotografía de perfil</figcaption>
+                </figure>
+            </header>
 
-    <footer role="contentinfo">
-        <p><small>&copy; 2026 Sergio Alejandro Trigo Murillo. Todos los derechos reservados.</small></p>
-    </footer>
-<script src="js/theme.js"></script>
+            <main id="contenido_principal" role="main">
+                <section id="datos_personales" aria-labelledby="datos_heading" class="section_block">
+                    <h2 id="datos_heading">Datos Personales</h2>
+                    <article class="card_item">
+                        <h3>Sergio Alejandro Trigo Murillo</h3>
+                        <p><strong>Profesión:</strong> Ingeniero de Sistemas</p>
+                        <address>
+                            <strong>País:</strong> La Paz, Bolivia<br>
+                            <strong>Correo Electrónico:</strong> <a href="mailto:sergio.trigo754@gmail.com">sergio.trigo754@gmail.com</a><br>
+                            <strong>Teléfono:</strong> <a href="tel:+59162344037">+591 62344037</a>
+                        </address>
+
+                        <section id="info_estudios" aria-label="Historial académico">
+                            <h4>Estudios y Cursos</h4>
+                            <ul class="studies_list">
+                                <li><strong>Estudios básicos:</strong> Colegio Amor de Dios (2010 - 2023)</li>
+                                <li><strong>Estudio profesional:</strong> Universidad Católica Boliviana (2024 - 2029)</li>
+                                <li><strong>Curso:</strong> Redes y Seguridad Packet Tracer (2026)</li>
+                                <li><strong>Curso:</strong> Google DeepMind (2026)</li>
+                            </ul>
+                        </section>
+                    </article>
+                </section>
+
+                <section id="perfil_profesional" aria-labelledby="perfil_heading" class="section_block">
+                    <h2 id="perfil_heading">Perfil Profesional</h2>
+                    <article class="card_item">
+                        <p>
+                            <strong>Presentación:</strong> Ingeniero de sistemas enfocado en conectividad, seguridad de redes y desarrollo de software estructurado.
+                        </p>
+                        <p>
+                            <strong>Habilidades blandas:</strong> <em>Sincronización en equipo, resolución bajo presión y pensamiento algorítmico.</em>
+                        </p>
+                    </article>
+                </section>
+
+                <section id="trabajos" aria-labelledby="trabajos_heading" class="section_block">
+                    <h2 id="trabajos_heading">Trabajos y Proyectos Destacados</h2>
+                    <article class="card_item">
+                        <h3>A.P. Moller - Maersk</h3>
+                        <p><strong>Puesto:</strong> Ingeniero de Redes (1 año)</p>
+                    </article>
+
+                    <article class="card_item">
+                        <h3>Creador de Grafos Online</h3>
+                        <p><strong>Descripción:</strong> Modelado de nodos y visualización de algoritmos de optimización.</p>
+                        <p><strong>Tecnologías:</strong> <code>Vue</code>, <code>JavaScript</code></p>
+                        <p><a href="https://github.com/Agares21/Proyecto-algoritmos" target="_blank" rel="noopener noreferrer">Ver repositorio en GitHub</a></p>
+                    </article>
+                </section>
+                <section id="habilidades" aria-labelledby="habilidades_heading" class="section_block">
+                    <h2 id="habilidades_heading">Nivel de Conocimiento</h2>
+                    <div class="search_wrapper">
+                        <label for="input_buscador">Filtrar habilidades en tiempo real:</label>
+                        <input type="search" id="input_buscador" placeholder="Buscar tecnología (ej. Java, Vue, Python)..." aria-label="Filtrar tecnologías">
+                    </div>
+                    <ul id="skills_container" class="skills_list" aria-live="polite">
+                        <li data-skill="JavaScript">
+                            <label for="meter_js">JavaScript:</label>
+                            <meter id="meter_js" min="0" max="100" value="85" low="40" high="80" optimum="90">85%</meter>
+                            <span>85% (Avanzado)</span>
+                        </li>
+                        <li data-skill="Vue.js">
+                            <label for="meter_vue">Vue.js:</label>
+                            <meter id="meter_vue" min="0" max="100" value="75" low="40" high="80" optimum="90">75%</meter>
+                            <span>75% (Intermedio)</span>
+                        </li>
+                        <li data-skill="Python">
+                            <label for="meter_python">Python:</label>
+                            <meter id="meter_python" min="0" max="100" value="70" low="40" high="80" optimum="90">70%</meter>
+                            <span>70% (Intermedio)</span>
+                        </li>
+                        <li data-skill="C++">
+                            <label for="meter_cplus">C++:</label>
+                            <meter id="meter_cplus" min="0" max="100" value="65" low="40" high="80" optimum="90">65%</meter>
+                            <span>65% (Intermedio)</span>
+                        </li>
+                        <li data-skill="Redes & Packet Tracer">
+                            <label for="meter_redes">Redes & Packet Tracer:</label>
+                            <meter id="meter_redes" min="0" max="100" value="90" low="40" high="80" optimum="90">90%</meter>
+                            <span>90% (Experto)</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="repositorios_github" aria-labelledby="github_heading" class="section_block">
+                    <h2 id="github_heading">Proyectos en Vivo (GitHub REST API)</h2>
+                    <div id="github_status" class="api_status" aria-live="polite"></div>
+                    <div id="github_repos_container" class="github_grid"></div>
+                </section>
+
+            </main>
+
+            <footer role="contentinfo" class="main_footer">
+                <p><small>&copy; 2026 Sergio Alejandro Trigo Murillo. Todos los derechos reservados.</small></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/github_api.js"></script>
 </body>
 
 </html>
