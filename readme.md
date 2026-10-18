@@ -11,8 +11,6 @@
 
 ##Estructura del Proyecto
 
-El proyecto sigue una separación rigurosa de responsabilidades (marcado, presentación y comportamiento), aplicando una convención uniforme en **`snake_case`**:
-
 ```text
 Examen-tecno/
 │
