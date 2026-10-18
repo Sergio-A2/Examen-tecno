@@ -1,58 +1,58 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector(".contact-form");
+    const form = document.querySelector(".contact_form");
+    const feedback = document.getElementById("form_feedback");
     if (!form) return;
 
-    form.addEventListener("submit", (event) => {
-        event.preventDefault(); 
+    const fields = {
+        nombre: document.getElementById("nombre"),
+        correo: document.getElementById("correo"),
+        telefono: document.getElementById("telefono"),
+        motivo: document.getElementById("motivo"),
+        mensaje: document.getElementById("mensaje"),
+        consentimiento: document.getElementById("consentimiento")
+    };
+    Object.values(fields).forEach(input => {
+        if (!input) return;
+        input.addEventListener("input", () => {
+            if (input.checkValidity()) {
+                input.style.borderColor = "var(--success_color)";
+            } else {
+                input.style.borderColor = "var(--error_color)";
+            }
+        });
+    });
 
-        const nombre = document.getElementById("nombre");
-        const correo = document.getElementById("correo");
-        const telefono = document.getElementById("telefono");
-        const motivo = document.getElementById("motivo");
-        const mensaje = document.getElementById("mensaje");
-        const consentimiento = document.getElementById("consentimiento");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const errores = [];
 
-        let esValido = true;
-        let mensajeError = "";
-
-        const regexNombre = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,60}$/;
-        if (!regexNombre.test(nombre.value.trim())) {
-            esValido = false;
-            mensajeError += "• Ingrese un nombre válido.\n";
+        if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,60}$/.test(fields.nombre.value.trim())) {
+            errores.push("Nombre inválido.");
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.correo.value.trim())) {
+            errores.push("Correo electrónico inválido.");
+        }
+        if (!/^(\+591|591)?[67][0-9]{7}$/.test(fields.telefono.value.trim())) {
+            errores.push("Celular inválido (8 dígitos).");
+        }
+        if (!fields.motivo.value) {
+            errores.push("Seleccione un motivo.");
+        }
+        if (fields.mensaje.value.trim().length < 10) {
+            errores.push("El mensaje debe contener al menos 10 caracteres.");
+        }
+        if (!fields.consentimiento.checked) {
+            errores.push("Debe aceptar los términos de contacto.");
         }
 
-        const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!regexCorreo.test(correo.value.trim())) {
-            esValido = false;
-            mensajeError += "• Ingrese un correo electrónico válido.\n";
-        }
-
-        const regexTel = /^(\+591|591)?[67][0-9]{7}$/;
-        if (!regexTel.test(telefono.value.trim())) {
-            esValido = false;
-            mensajeError += "• El teléfono debe ser un número celular válido.\n";
-        }
-
-        if (motivo.value === "") {
-            esValido = false;
-            mensajeError += "• Seleccione un motivo de contacto.\n";
-        }
-
-        if (mensaje.value.trim().length < 10) {
-            esValido = false;
-            mensajeError += "• El mensaje debe contener al menos 10 caracteres.\n";
-        }
-
-        if (!consentimiento.checked) {
-            esValido = false;
-            mensajeError += "• Debe autorizar el uso de sus datos para enviar la consulta.\n";
-        }
-
-        if (!esValido) {
-            alert("Error en el formulario:\n\n" + mensajeError);
+        if (errores.length > 0) {
+            feedback.className = "form_feedback error";
+            feedback.innerHTML = `<strong>Errores detectados:</strong><br>• ${errores.join("<br>• ")}`;
         } else {
-            alert("¡Mensaje enviado con éxito! Espera hasta que te llegue.");
+            feedback.className = "form_feedback success";
+            feedback.innerHTML = "<strong>¡Éxito!</strong> Formulario validado y enviado correctamente.";
             form.reset();
+            Object.values(fields).forEach(f => f && (f.style.borderColor = "var(--border_color)"));
         }
     });
 });
